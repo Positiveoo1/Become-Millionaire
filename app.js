@@ -7,12 +7,14 @@ const moneyContainer = document.getElementById('money');
 
 let count = 0;
 
-// Initially hide the money container
+// TODO: Initially hide the money container
 moneyContainer.style.display = 'none';
 
+// TODO addeventListener.
 btn.addEventListener('click', function(e){
     count++;
     counted.innerText = `Clicked ${count} times`;
+
 
     if(count === 100) {
         btn.disabled = true;
@@ -23,24 +25,25 @@ btn.addEventListener('click', function(e){
         moneyContainer.style.display = 'block';
  
         
-      
+    //   TODO: this iterates within 2849 times the icon
         for(let i = 0; i < 2849; i++) {
             const moneyIcon = document.createElement('i');
             moneyIcon.classList.add('fa-solid', 'fa-money-bill-wave');
             moneyContainer.appendChild(moneyIcon);
             moneyIcon.style.color = 'green';
         }
+        // TODO: this styles the icon and the name of "Congratulations" in js
         const congrats = document.createElement('h1');
         congrats.innerText = 'Congratulations!';
         document.body.appendChild(congrats);
         congrats.style.textAlign = 'center';
-        congrats.style.color = 'white'; // Set text color to white
-        congrats.style.position = 'fixed'; // Position fixed
-        congrats.style.top = '50%'; // Center vertically
-        congrats.style.left = '50%'; // Center horizontally
-        congrats.style.transform = 'translate(-50%, -50%)'; // Center exactly
-        congrats.style.zIndex = '999'; // Set a high z-index
-        congrats.style.fontSize = '100px'; // Set font size to 100px
+        congrats.style.color = 'white'; 
+        congrats.style.position = 'fixed'; 
+        congrats.style.top = '50%'; 
+        congrats.style.left = '50%'; 
+        congrats.style.transform = 'translate(-50%, -50%)';
+        congrats.style.zIndex = '999'; 
+        congrats.style.fontSize = '100px'; 
 
     }
 })
