@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7E58C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button {
+    background-color: rgba(155, 89, 182, 1);
+    border: 2px solid rgba(142, 68, 173, 1);
+    border-radius: 8px;
+    box-shadow: 0 6px rgba(155, 89, 182, 1), 0 8px rgba(142, 68, 173, 1);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 30px;
+    position: relative;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.2s linear, box-shadow 0.2s linear;
+    text-decoration: none;
+    margin-top: 30px;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+ p{
+    margin-top: 20px;
+ }
+ h1 {
+    text-align: center;
+ }
+ #counted {
+    margin-top: 20px;
+ }
+ #money {
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+ @keyframes moveMoney {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  #money {
+    animation: moveMoney 1s ease-in-out forwards;
+  }
+
